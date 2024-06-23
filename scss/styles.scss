@@ -1,0 +1,635 @@
+@use "modules.scss/mixines";
+@use "modules.scss/variables" as v;
+
+body {
+  display: block;
+  margin: 0 auto;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  max-height: 2464px;
+  box-sizing: border-box;
+  background-color: v.$background2;
+}
+.wrapper {
+  width: 100%;
+  margin: auto;
+}
+
+/* Header */
+
+header {
+  width: 100%;
+  height: 24%;
+  box-sizing: border-box;
+  background: v.$background1;
+  color: v.$color2;
+  padding: 35px 9% 83px 9%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+h1,
+.h1 {
+  @include mixines.Font1();
+  margin-top: 0;
+}
+h5 {
+  margin-top: 0;
+}
+
+p,
+.p {
+  margin-top: 0;
+}
+
+/* Header menu */
+
+nav.menu {
+  margin-bottom: 40px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#burger-checkbox {
+  display: none;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.menu-item {
+  padding-right: 3rem;
+  text-decoration: none;
+  color: v.$color2;
+  transition: 0.5s;
+}
+
+.menu-item:hover {
+  font-size: large;
+}
+
+#contact {
+  padding-right: 0rem;
+}
+
+/* Header content */
+
+.header-main {
+  width: 100%;
+  height: 15.34%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-content {
+  width: 33%;
+  height: 12%;
+  margin-left: 0;
+  margin-top: 1.6%;
+  margin-right: 8%;
+  margin-bottom: 1.6%;
+}
+
+.header-main .main-content h5 {
+  @include mixines.Font3();
+}
+
+.header-main .main-content h1 {
+  color: v.$color2;
+}
+
+.header-main .main-content p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 125%;
+  color: v.$color3;
+}
+
+.main-content button {
+  @include mixines.button();
+  color: v.$color4;
+  margin-top: 1%;
+}
+
+.main-content button:hover {
+  background-color: v.$background-button;
+  color: v.$color2;
+}
+
+.main-img,
+.img-content-2,
+.img-content-3,
+#logotyp {
+  width: 100%;
+}
+
+/* Content */
+
+.content-partners {
+  @include mixines.title();
+  width: 100%;
+  display: block;
+  margin-top: 60px;
+  margin-bottom: 77px;
+}
+
+.content-title {
+  padding-left: 35%;
+  padding-right: 35%;
+}
+
+.content-title h5,
+.content-title-4 h5 {
+  @include mixines.Font3();
+  color: v.$background1;
+}
+
+.content-title h1,
+.content-title-4 h1 {
+  @include mixines.Font1();
+  color: v.$color4;
+}
+
+.content-title p,
+.content-title-4 p {
+  @include mixines.Font2();
+  color: v.$color4;
+}
+
+.content-logotup {
+  margin-top: 55px;
+  margin-bottom: 55px;
+}
+
+.content-logotup img {
+  padding-right: 5%;
+}
+
+.content-2 {
+  width: 100%;
+  height: 17.5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-title-2 {
+  width: 35%;
+  height: 10%;
+  margin-top: 88px;
+}
+
+.content-3 {
+  width: 100%;
+  height: 23%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 73.5px;
+}
+
+.content-title-3 {
+  width: 35%;
+  height: 10%;
+  margin-top: 155px;
+}
+
+.content-title-2 h1,
+.content-title-3 h1 {
+  @include mixines.Font1();
+  color: v.$background-button;
+}
+
+.content-title-2 p,
+.content-title-3 p {
+  padding-right: 10%;
+  font-weight: 400;
+  font-size: 15px;
+  color: v.$color5;
+}
+
+.content-4 {
+  @include mixines.title();
+  width: 100%;
+  display: block;
+  margin-top: 84px;
+  margin-bottom: 72px;
+}
+
+.content-title-4 {
+  margin-bottom: 45px;
+}
+
+/* Button */
+
+.content-partners button,
+.content-title-2 button,
+.content-title-3 button,
+.content-4 button,
+form button {
+  @include mixines.button();
+  background-color: v.$background-button;
+  color: v.$color2;
+  margin-top: 1%;
+}
+
+.content-partners button:hover,
+.content-title-2 button:hover,
+.content-title-3 button:hover,
+.content-4 button:hover,
+form button:hover {
+  background-color: v.$background1;
+  color: v.$color4;
+}
+
+.content-4 button {
+  margin-top: 45px;
+}
+
+/* Carousel */
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: v.$background-button !important;
+  color: v.$color2 !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 0.5rem !important;
+  border-style: none !important;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: v.$background1 !important;
+  color: v.$color4 !important;
+}
+
+/* Accordion */
+
+.accordion {
+  width: 100%;
+  margin: 30px 0% 30px 0%;
+}
+
+.accordion-title {
+  @include mixines.title();
+  display: block;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+  padding-left: 37%;
+  padding-top: 1%;
+  padding-right: 37%;
+  padding-bottom: 1%;
+}
+
+.p {
+  @include mixines.Font2();
+  color: v.$color4;
+}
+
+.accordion-title:hover {
+  background-color: v.$background1;
+}
+
+.accordion-item {
+  border: 1px solid v.$color1;
+}
+
+.accordion-input {
+  width: 0;
+  height: 0;
+  appearance: none;
+  position: absolute;
+}
+
+.accordion-input:checked + .accordion-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-text {
+  padding: 30px;
+  display: none;
+}
+
+/* Form */
+
+.accordion-text form {
+  width: 40%;
+  height: 100%;
+}
+
+form input,
+form textarea {
+  border: 1px solid v.$color4;
+  border-radius: 5px;
+  width: 100%;
+  height: 38px;
+  background: v.$background3;
+}
+
+form textarea {
+  height: 75px;
+}
+
+.accordion-text form {
+  @include mixines.Font2();
+  margin-right: 2%;
+}
+
+form button {
+  border-radius: 5px;
+  width: 100%;
+  height: 48px;
+}
+
+/* Footer */
+
+.footer {
+  background: v.$background1;
+  color: v.$color2;
+  padding: 50px 9%;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.span {
+  @include mixines.Font2();
+}
+
+.icon {
+  margin-right: 20px;
+}
+
+/*Responsive 1000px*/
+
+header {
+  @include mixines.responsive(1000px) {
+    height: 100%;
+    padding: 25px 4% 25px 4%;
+  }
+}
+
+.menu-list {
+  @include mixines.responsive(1000px) {
+    margin-top: 2rem;
+  }
+}
+
+.header-main {
+  @include mixines.responsive(1000px) {
+    flex-direction: column;
+    .main-content {
+      order: 1;
+      padding: 0%;
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+}
+
+.content {
+  @include mixines.responsive(1000px) {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+.content-title,
+.accordion-title {
+  @include mixines.responsive(1000px) {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
+
+.content-logotup img {
+  @include mixines.responsive(1000px) {
+    margin-bottom: 20px;
+  }
+}
+
+.content-2 {
+  @include mixines.responsive(1000px) {
+    flex-direction: column;
+    padding: 0 4% 0 4%;
+    .content-title-2 {
+      padding-right: 50px;
+      width: 100%;
+    }
+  }
+}
+
+.content-3 {
+  @include mixines.responsive(1000px) {
+    flex-direction: column;
+    padding: 0 4% 0 4%;
+    .content-title-3 {
+      order: 1;
+      padding-right: 50px;
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+}
+
+.accordion-text {
+  @include mixines.responsive(1000px) {
+    flex-direction: column;
+    form {
+      order: 1;
+      padding: 0%;
+      width: 100%;
+    }
+  }
+}
+
+.footer {
+  @include mixines.responsive(1000px) {
+    padding: 30px 6%;
+    footer {
+      flex-direction: column;
+      justify-content: center;
+      gap: 15px;
+    }
+  }
+}
+
+/*Responsive 500px*/
+
+.menu {
+  @include mixines.responsive(500px) {
+    .burger-checkbox {
+      position: absolute;
+      visibility: hidden;
+    }
+    .burger {
+      position: relative;
+      z-index: 1;
+      cursor: pointer;
+      display: block;
+      position: relative;
+      border: none;
+      background: v.$background1;
+      width: 40px;
+      height: 26px;
+    }
+    .burger::before,
+    .burger::after {
+      content: "";
+      left: 0;
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 4px;
+      border-radius: 10px;
+      background: v.$background2;
+    }
+    .burger::before {
+      top: 0;
+      box-shadow: 0 11px 0 v.$background2;
+      transition: box-shadow 0.3s 0.15s, top 0.3s 0.15s, transform 0.3s;
+    }
+    .burger::after {
+      bottom: 0;
+      transition: bottom 0.3s 0.15s, transform 0.3s;
+    }
+    .burger-checkbox:checked + .burger::before {
+      top: 11px;
+      transform: rotate(45deg);
+      box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+      transition: box-shadow 0.15s, top 0.3s, transform 0.3s 0.15s;
+    }
+    .burger-checkbox:checked + .burger::after {
+      bottom: 11px;
+      transform: rotate(-45deg);
+      transition: bottom 0.3s, transform 0.3s 0.15s;
+    }
+    .menu-list {
+      top: 0;
+      left: 0;
+      position: absolute;
+      display: grid;
+      gap: 12px;
+      padding: 42px 0;
+      margin: 0;
+      background: v.$background1;
+      opacity: 90%;
+      list-style-type: none;
+      transform: translateX(-100%);
+      transition: 0.3s;
+      width: 100%;
+    }
+    .menu-item {
+      display: block;
+      padding: 8px;
+      color: v.$color2;
+      font-size: 18px;
+      text-align: center;
+      text-decoration: none;
+    }
+    .menu-item:hover {
+      background: rgba(193, 245, 185, 0.2);
+    }
+    .burger-checkbox:checked ~ .menu-list {
+      transform: translateX(0);
+    }
+  }
+}
+
+.main-content h1 {
+  @include mixines.responsive(500px) {
+    font-size: 28px;
+  }
+}
+
+.content-title h5,
+.content-title-4 h5 {
+  @include mixines.responsive(500px) {
+    font-size: 16px;
+  }
+}
+
+.content-title h1,
+.content-title-2 h1,
+.content-title-3 h1,
+.content-title-4 h1 {
+  @include mixines.responsive(500px) {
+    font-size: 24px;
+  }
+}
+
+.content-title p,
+.content-title-4 p {
+  @include mixines.responsive(500px) {
+    font-size: 20px;
+  }
+}
+
+.content-logotup {
+  @include mixines.responsive(500px) {
+    display: flex;
+    flex-direction: column;
+    margin-left: 67.5px;
+    margin-right: 67.5px;
+  }
+}
+
+.content-logotup img {
+  @include mixines.responsive(500px) {
+    padding: 0;
+    margin-bottom: 40px;
+  }
+}
+
+#spotify {
+  @include mixines.responsive(500px) {
+    margin-bottom: 0;
+  }
+}
+
+.carousel-item {
+  @include mixines.responsive(576px) {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
+
+.accordion-title {
+  @include mixines.responsive(1000px) {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+}
+
+form {
+  @include mixines.responsive(500px) {
+    margin-top: 21px;
+  }
+}
+
+form textarea {
+  @include mixines.responsive(500px) {
+    height: 141px;
+  }
+}

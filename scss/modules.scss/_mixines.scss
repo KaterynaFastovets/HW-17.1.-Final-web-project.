@@ -1,0 +1,56 @@
+$font-family: "Crimson Text", sans-serif;
+$font-family-bottom: "Work Sans", sans-serif;
+$font-size1: 40px;
+$font-size2: 20px;
+$font-size3: 16px;
+$font-weight1: 700;
+$font-weight2: 400;
+$width: 170px;
+$height: 48px;
+$border-radius: 0.5rem;
+$border-style: none;
+$text-align: center;
+$line-height: 125%;
+
+@mixin title() {
+  line-height: $line-height;
+  text-align: $text-align;
+}
+
+@mixin Font1() {
+  font-family: $font-family;
+  font-weight: $font-weight1;
+  font-size: $font-size1;
+  line-height: $line-height;
+}
+
+@mixin Font2() {
+  font-weight: $font-weight2;
+  font-size: $font-size2;
+  line-height: $line-height;
+}
+
+@mixin Font3() {
+  font-size: $font-size3;
+  letter-spacing: 0.31em;
+  text-transform: uppercase;
+}
+
+@mixin button() {
+  cursor: pointer;
+  width: $width;
+  height: $height;
+  border-radius: $border-radius;
+  border-style: $border-style;
+  font-family: $font-family-bottom;
+  font-weight: $font-weight2;
+  font-size: $font-size2;
+  text-align: $text-align;
+  line-height: $line-height;
+}
+
+@mixin responsive($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
