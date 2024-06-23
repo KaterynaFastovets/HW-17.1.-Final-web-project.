@@ -178,7 +178,11 @@ nav.menu {
 }
 
 .content-logotup img {
-  padding-right: 5%;
+  padding-right: 6%;
+}
+
+#google {
+  padding-left: 6%;
 }
 
 .content-2 {
@@ -186,6 +190,7 @@ nav.menu {
   height: 17.5%;
   display: flex;
   justify-content: space-between;
+  padding: 0 4% 0 4%;
 }
 
 .content-title-2 {
@@ -199,6 +204,7 @@ nav.menu {
   height: 23%;
   display: flex;
   justify-content: space-between;
+  padding: 0 4% 0 4%;
   margin-top: 73.5px;
 }
 
@@ -424,15 +430,17 @@ header {
 }
 
 .content-logotup img {
-  @include mixines.responsive(1000px) {
-    margin-bottom: 20px;
+  @include mixines.responsive(1426px) {
+    margin-bottom: 40px;
+    #spotify {
+      padding-bottom: 0;
+    }
   }
 }
 
 .content-2 {
   @include mixines.responsive(1000px) {
     flex-direction: column;
-    padding: 0 4% 0 4%;
     .content-title-2 {
       padding-right: 50px;
       width: 100%;
@@ -443,13 +451,19 @@ header {
 .content-3 {
   @include mixines.responsive(1000px) {
     flex-direction: column;
-    padding: 0 4% 0 4%;
     .content-title-3 {
       order: 1;
       padding-right: 50px;
       width: 100%;
       margin-top: 30px;
     }
+  }
+}
+
+.accordion-title {
+  @include mixines.responsive(1000px) {
+    padding-left: 15%;
+    padding-right: 15%;
   }
 }
 
@@ -612,13 +626,6 @@ header {
   @include mixines.responsive(576px) {
     display: flex !important;
     flex-direction: column !important;
-  }
-}
-
-.accordion-title {
-  @include mixines.responsive(1000px) {
-    padding-left: 15%;
-    padding-right: 15%;
   }
 }
 
